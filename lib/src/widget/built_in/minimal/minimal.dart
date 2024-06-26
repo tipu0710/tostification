@@ -163,8 +163,7 @@ class MinimalToastWidget extends StatelessWidget {
             showUndoButton: showCloseButton,
             onUndoTap: onCloseTap,
             textStyle: undoButtontextStyle,
-            backgroundColor: foregroundColor?.withOpacity(.3) ??
-                defaultStyle.undoButtonColor(context),
+            backgroundColor: defaultStyle.undoButtonColor(context),
           ),
         ],
       ),
