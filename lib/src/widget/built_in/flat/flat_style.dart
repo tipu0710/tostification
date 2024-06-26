@@ -48,7 +48,7 @@ class FlatStyle extends BuiltInStyle {
 
   @override
   Color closeIconColor(BuildContext context) {
-    return Theme.of(context).colorScheme.primary.withOpacity(.3);
+    return foregroundColor(context).withOpacity(.3);
   }
 
   @override
@@ -72,5 +72,10 @@ class FlatStyle extends BuiltInStyle {
       linearTrackColor: foregroundColor(context).withOpacity(.05),
       refreshBackgroundColor: foregroundColor(context).withOpacity(.05),
     );
+  }
+  
+  @override
+  Color undoButtonColor(BuildContext context) {
+    return Theme.of(context).primaryColor.withOpacity(0.3);
   }
 }

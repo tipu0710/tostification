@@ -43,8 +43,8 @@ class FilledStyle extends BuiltInStyle {
   }
 
   @override
-  Color closeIconColor(BuildContext context) { 
-    return Theme.of(context).colorScheme.primary.withOpacity(.6);
+  Color closeIconColor(BuildContext context) {
+    return foregroundColor(context).withOpacity(.6);
   }
 
   @override
@@ -75,5 +75,10 @@ class FilledStyle extends BuiltInStyle {
       linearTrackColor: foregroundColor(context).withOpacity(.15),
       refreshBackgroundColor: foregroundColor(context).withOpacity(.15),
     );
+  }
+  
+  @override
+  Color undoButtonColor(BuildContext context) {
+    return Theme.of(context).primaryColor.withOpacity(0.6);
   }
 }

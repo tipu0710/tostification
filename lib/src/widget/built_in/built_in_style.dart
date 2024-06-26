@@ -72,6 +72,7 @@ abstract class BuiltInStyle {
 
   IconData closeIcon(BuildContext context);
   Color closeIconColor(BuildContext context);
+  Color undoButtonColor(BuildContext context);
 
   BorderSide borderSide(BuildContext context);
 

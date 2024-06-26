@@ -78,4 +78,9 @@ class SimpleStyle extends BuiltInStyle {
       refreshBackgroundColor: foregroundColor(context).withOpacity(.05),
     );
   }
+
+  @override
+  Color undoButtonColor(BuildContext context) {
+    return Theme.of(context).primaryColor.withOpacity(0.3);
+  }
 }

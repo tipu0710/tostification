@@ -150,7 +150,7 @@ class FilledToastWidget extends StatelessWidget {
             onUndoTap: onCloseTap,
             textStyle: undoButtontextStyle,
             backgroundColor: foregroundColor?.withOpacity(.6) ??
-                defaultStyle.closeIconColor(context),
+                defaultStyle.undoButtonColor(context),
           ),
         ],
       ),

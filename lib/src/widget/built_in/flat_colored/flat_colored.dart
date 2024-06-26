@@ -150,7 +150,7 @@ class FlatColoredToastWidget extends StatelessWidget {
             onUndoTap: onCloseTap,
             textStyle: undoButtontextStyle,
             backgroundColor: foregroundColor?.withOpacity(.3) ??
-                defaultStyle.closeIconColor(context),
+                defaultStyle.undoButtonColor(context),
           ),
         ],
       ),
