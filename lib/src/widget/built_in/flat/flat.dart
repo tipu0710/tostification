@@ -73,7 +73,7 @@ class FlatToastWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final iconColor = defaultStyle.iconColor(context);
+    final iconColor = primaryColor ?? defaultStyle.iconColor(context);
 
     final background = backgroundColor ?? defaultStyle.backgroundColor(context);
 

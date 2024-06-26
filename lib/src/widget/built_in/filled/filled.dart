@@ -74,7 +74,7 @@ class FilledToastWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final iconColor = defaultStyle.iconColor(context);
+    final iconColor = foregroundColor ?? defaultStyle.iconColor(context);
 
     final background = primaryColor ?? defaultStyle.backgroundColor(context);
 
