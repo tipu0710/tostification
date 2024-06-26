@@ -29,6 +29,7 @@ class FilledToastWidget extends StatelessWidget {
     this.progressBarWidget,
     this.progressIndicatorTheme,
     this.undoButtontextStyle,
+    this.undoButtonBackgroundColor,
   });
 
   final ToastificationType type;
@@ -56,6 +57,7 @@ class FilledToastWidget extends StatelessWidget {
 
   final VoidCallback? onCloseTap;
   final TextStyle? undoButtontextStyle;
+  final Color? undoButtonBackgroundColor;
 
   final TextDirection? direction;
 
@@ -150,7 +152,8 @@ class FilledToastWidget extends StatelessWidget {
             showUndoButton: showCloseButton,
             onUndoTap: onCloseTap,
             textStyle: undoButtontextStyle,
-            backgroundColor: defaultStyle.undoButtonColor(context),
+            backgroundColor: undoButtonBackgroundColor ??
+                defaultStyle.undoButtonColor(context),
           ),
         ],
       ),

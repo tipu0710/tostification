@@ -29,6 +29,7 @@ class FlatToastWidget extends StatelessWidget {
     this.progressIndicatorTheme,
     this.applyBlurEffect = false,
     this.undoButtontextStyle,
+    this.undoBttonBackgroundColor,
   });
 
   final ToastificationType type;
@@ -58,6 +59,7 @@ class FlatToastWidget extends StatelessWidget {
 
   final VoidCallback? onCloseTap;
   final TextStyle? undoButtontextStyle;
+  final Color? undoBttonBackgroundColor;
 
   final bool? showCloseButton;
 
@@ -149,7 +151,8 @@ class FlatToastWidget extends StatelessWidget {
             showUndoButton: showCloseButton,
             onUndoTap: onCloseTap,
             textStyle: undoButtontextStyle,
-            backgroundColor: defaultStyle.undoButtonColor(context),
+            backgroundColor: undoBttonBackgroundColor ??
+                defaultStyle.undoButtonColor(context),
           ),
         ],
       ),

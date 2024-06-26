@@ -30,6 +30,7 @@ class MinimalToastWidget extends StatelessWidget {
     this.progressIndicatorTheme,
     this.applyBlurEffect = false,
     this.undoButtontextStyle,
+    this.undoButtonBackgroundColor,
   });
 
   final ToastificationType type;
@@ -57,6 +58,7 @@ class MinimalToastWidget extends StatelessWidget {
 
   final VoidCallback? onCloseTap;
   final TextStyle? undoButtontextStyle;
+  final Color? undoButtonBackgroundColor;
 
   final TextDirection? direction;
 
@@ -163,7 +165,8 @@ class MinimalToastWidget extends StatelessWidget {
             showUndoButton: showCloseButton,
             onUndoTap: onCloseTap,
             textStyle: undoButtontextStyle,
-            backgroundColor: defaultStyle.undoButtonColor(context),
+            backgroundColor: undoButtonBackgroundColor ??
+                defaultStyle.undoButtonColor(context),
           ),
         ],
       ),

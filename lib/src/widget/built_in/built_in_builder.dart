@@ -34,6 +34,7 @@ class BuiltInBuilder extends StatelessWidget {
     this.dismissDirection,
     this.pauseOnHover,
     this.callbacks = const ToastificationCallbacks(),
+    this.undoButtonBackgroundColor,
   });
 
   final ToastificationItem item;
@@ -82,6 +83,8 @@ class BuiltInBuilder extends StatelessWidget {
 
   final ToastificationCallbacks callbacks;
 
+  final Color? undoButtonBackgroundColor;
+
   @override
   Widget build(BuildContext context) {
     final showProgressBar = (this.showProgressBar ?? true);
@@ -120,6 +123,7 @@ class BuiltInBuilder extends StatelessWidget {
         applyBlurEffect: applyBlurEffect,
         progressBarTheme: progressBarTheme,
         closeButtonShowType: closeButtonShowType,
+        undoButtonBackgroundColor: undoButtonBackgroundColor,
       ),
     );
   }
@@ -168,6 +172,7 @@ class BuiltInToastBuilder extends StatelessWidget {
     this.applyBlurEffect,
     this.progressBarTheme,
     this.closeButtonShowType,
+    this.undoButtonBackgroundColor,
   });
 
   final ToastificationItem? item;
@@ -206,6 +211,8 @@ class BuiltInToastBuilder extends StatelessWidget {
   final ProgressIndicatorThemeData? progressBarTheme;
 
   final CloseButtonShowType? closeButtonShowType;
+
+  final Color? undoButtonBackgroundColor;
 
   @override
   Widget build(BuildContext context) {
@@ -256,6 +263,7 @@ class BuiltInToastBuilder extends StatelessWidget {
               progressIndicatorTheme: progressBarTheme,
               progressBarWidget: progressBarWidget,
               applyBlurEffect: applyBlurEffect ?? false,
+              undoBttonBackgroundColor: undoButtonBackgroundColor,
             ),
           ToastificationStyle.flatColored => FlatColoredToastWidget(
               type: type,
@@ -277,6 +285,7 @@ class BuiltInToastBuilder extends StatelessWidget {
               showProgressBar: this.showProgressBar == true,
               progressIndicatorTheme: progressBarTheme,
               progressBarWidget: progressBarWidget,
+              undoButtonBackgroundColor: undoButtonBackgroundColor,
             ),
           ToastificationStyle.fillColored => FilledToastWidget(
               type: type,
@@ -298,6 +307,7 @@ class BuiltInToastBuilder extends StatelessWidget {
               showProgressBar: this.showProgressBar == true,
               progressIndicatorTheme: progressBarTheme,
               progressBarWidget: progressBarWidget,
+              undoButtonBackgroundColor: undoButtonBackgroundColor,
             ),
           ToastificationStyle.minimal => MinimalToastWidget(
               type: type,
@@ -319,6 +329,7 @@ class BuiltInToastBuilder extends StatelessWidget {
               applyBlurEffect: applyBlurEffect ?? false,
               progressIndicatorTheme: progressBarTheme,
               progressBarWidget: progressBarWidget,
+              undoButtonBackgroundColor: undoButtonBackgroundColor,
             ),
           ToastificationStyle.simple => SimpleToastWidget(
               type: type,

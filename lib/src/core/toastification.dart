@@ -260,6 +260,7 @@ class Toastification {
     bool? pauseOnHover,
     bool? applyBlurEffect,
     ToastificationCallbacks callbacks = const ToastificationCallbacks(),
+    Color? undoButtonBackgroundColor,
   }) {
     return showCustom(
       context: context,
@@ -296,6 +297,7 @@ class Toastification {
           pauseOnHover: pauseOnHover,
           applyBlurEffect: applyBlurEffect,
           callbacks: callbacks,
+          undoButtonBackgroundColor: undoButtonBackgroundColor,
         );
       },
     );
