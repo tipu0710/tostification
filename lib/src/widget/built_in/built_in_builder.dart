@@ -139,12 +139,7 @@ class BuiltInBuilder extends StatelessWidget {
   VoidCallback _onCloseButtonTap() {
     return () {
       callbacks.onCloseButtonTap != null
-          ? () {
-              callbacks.onCloseButtonTap?.call(item);
-              if (closeOnClick == true) {
-                Toastification().dismiss(item);
-              }
-            }
+          ? callbacks.onCloseButtonTap?.call(item)
           : _defaultCloseButtonTap();
     };
   }
